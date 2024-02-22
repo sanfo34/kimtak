@@ -1,0 +1,6 @@
+@Kimtak.Server_HostAddress = http://localhost:5080
+
+GET {{Kimtak.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
