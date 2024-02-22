@@ -1,18 +1,13 @@
-﻿@page "/counter"
+﻿@using Kimtak.Client.Presenter
+
+
+@page "/counter"
+@inject CounterPresenter Presenter
 
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
 
-<p role="status">Current count: @currentCount</p>
+<p role="status">Current count: @Presenter.CurrentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
-
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
+<button class="btn btn-primary" @onclick="Presenter.IncrementCount">Click me</button>
